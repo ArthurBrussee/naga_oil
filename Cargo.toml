@@ -17,10 +17,7 @@ prune = []
 allow_deprecated = []
 
 [dependencies]
-naga = { git = "https://github.com/gfx-rs/wgpu", rev = "aa7bec65b90028e4db6ec8def8589b52097d92f9", features = [
-    "wgsl-in",
-    "wgsl-out",
-] }
+naga = "23"
 tracing = "0.1"
 regex = "1.8"
 regex-syntax = "0.8"
@@ -34,6 +31,6 @@ once_cell = "1.17.0"
 indexmap = "2"
 
 [dev-dependencies]
-wgpu = { git = "https://github.com/gfx-rs/wgpu", rev = "aa7bec65b90028e4db6ec8def8589b52097d92f9" }
+wgpu = "23"
 futures-lite = "1"
 tracing-subscriber = { version = "0.3", features = ["std", "fmt"] }
