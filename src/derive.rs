@@ -447,7 +447,8 @@ impl<'a> DerivedModule<'a> {
                     Statement::Break
                     | Statement::Continue
                     | Statement::Kill
-                    | Statement::Barrier(_) => stmt.clone(),
+                    | Statement::Barrier(_)
+                    | Statement::ImageAtomic { .. } => stmt.clone(),
                 }
             })
             .collect();

@@ -642,7 +642,7 @@ impl StatementReq {
             StatementReq::If { condition, .. } => *condition,
             StatementReq::Switch { selector, .. } => *selector,
             StatementReq::Loop { required: break_if, .. } => *break_if,
-            StatementReq::Barrier() => false, // this will be emitted but never makes a block required. todo: does this make sense? 
+            StatementReq::Barrier() => false, // this will be emitted but never makes a block required. todo: does this make sense?
             StatementReq::Return(r) |    // return will be output if the block is output, but they should not make the block required unless we are within a required containing scope or the return value is required
                                             // this stops all functions appearing as required, even if retval is not required and no other part of the function is required
             StatementReq::Break(r) |
